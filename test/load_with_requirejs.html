@@ -4,7 +4,11 @@
 		<title>Javascript HTML5 Parser with RequireJS</title>
 		<script src="lib/require.js"></script>
 		<script>
-			require(["../lib/html5/index"], function(HTML5) {
+		    requirejs.config({
+		        baseUrl: '../lib'
+		    });
+		    
+			require(["html5/index"], function(HTML5) {
 				console.log('HTML5 loaded', HTML5);
 			});
 		</script>
